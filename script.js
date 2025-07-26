@@ -15,7 +15,9 @@ const setupCanvas = () => {
         "style",
         `width: ${pixelWidth}px;height: ${pixelHeight}px;`
       );
-
+      pixel.addEventListener("mouseenter", (e) => {
+        e.target.style.backgroundColor = "green";
+      });
       canvas.appendChild(pixel);
     }
   }
