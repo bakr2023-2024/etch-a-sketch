@@ -6,14 +6,14 @@ const setPixelSize = () => {
 };
 const setupCanvas = () => {
   const { width, height } = canvas.getBoundingClientRect();
-  const pixelWidth = width / pixelSize;
-  const pixelHeight = height / pixelSize;
+  const pixelWidth = Math.floor(width / pixelSize);
+  const pixelHeight = Math.floor(height / pixelSize);
   for (let i = 0; i < pixelSize; i++) {
     for (let j = 0; j < pixelSize; j++) {
       const pixel = document.createElement("div");
       pixel.setAttribute(
         "style",
-        `width: ${pixelWidth}px;height: ${pixelHeight}px;`
+        `width: ${pixelWidth}px;height: ${pixelHeight}px;box-sizing:border-box`
       );
       pixel.addEventListener("mouseenter", (e) => {
         e.target.style.backgroundColor = `rgb(
