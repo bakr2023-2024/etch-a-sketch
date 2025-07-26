@@ -9,8 +9,8 @@ body {
   align-items: center;
 }
 #container {
-  width: 80%;
-  height: auto;
+  width: 40vw;
+  height: 40vw;
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
