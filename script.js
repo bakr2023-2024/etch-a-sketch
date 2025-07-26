@@ -16,7 +16,10 @@ const setupCanvas = () => {
         `width: ${pixelWidth}px;height: ${pixelHeight}px;`
       );
       pixel.addEventListener("mouseenter", (e) => {
-        e.target.style.backgroundColor = "green";
+        e.target.style.backgroundColor = `rgb(
+        ${Math.floor(Math.random() * 256)},
+        ${Math.floor(Math.random() * 256)},
+        ${Math.floor(Math.random() * 256)})`;
       });
       canvas.appendChild(pixel);
     }
